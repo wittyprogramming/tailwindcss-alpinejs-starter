@@ -1,0 +1,12 @@
+{
+  "name": "tailwindcss-alpinejs-starter",
+  "version": "1.0.0",
+  "description": "An opinionated starter template based on tainwindCSS, alpine.js, postcss and esbuild.",
+  "scripts": {},
+  "author": "Konstantinos Zagoris",
+  "license": "ISC",
+  "dependencies": {
+    "alpinejs": "^2.7.0",
+    "tailwindcss": "^1.8.12"
+  }
+}
