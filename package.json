@@ -2,11 +2,24 @@
   "name": "tailwindcss-alpinejs-starter",
   "version": "1.0.0",
   "description": "An opinionated starter template based on tainwindCSS, alpine.js, postcss and esbuild.",
-  "scripts": {},
+  "scripts": {
+    "watch-css": "postcss src/css/main.css -o assets/css/style.css -w",
+    "build-css": "ENV_BUILD=prod postcss src/css/main.css -o assets/css/style.css"
+  },
   "author": "Konstantinos Zagoris",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "alpinejs": "^2.7.0",
     "tailwindcss": "^1.8.12"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "autoprefixer": "^10.0.1",
+    "cssnano": "^4.1.10",
+    "postcss": "^8.1.1",
+    "postcss-cli": "^8.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-copy": "^7.1.0"
   }
 }
