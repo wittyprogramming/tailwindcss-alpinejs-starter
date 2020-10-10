@@ -4,11 +4,13 @@
   "description": "An opinionated starter template based on tainwindCSS, alpine.js, postcss and esbuild.",
   "scripts": {
     "watch-css": "postcss src/css/main.css -o assets/css/style.css -w",
-    "build-css": "ENV_BUILD=prod postcss src/css/main.css -o assets/css/style.css",
+    "build-css": "cross-env ENV_BUILD=prod postcss src/css/main.css -o assets/css/style.css",
     "watch-js": "chokidar --verbose --initial \"src/ts/*\" -c \"npm run debug-js\"",
     "debug-js": "esbuild src/ts/main.ts --bundle --sourcemap=inline --target=es2016 --outfile=assets/js/main.js",
     "build-js": "esbuild src/ts/main.ts --bundle --minify --target=es2016 --outfile=assets/js/main.js",
-    "start": "concurrently \"npm:watch-css\" \"npm:watch-js\""
+    "start": "concurrently \"npm:watch-css\" \"npm:watch-js\"",
+    "copy": "copyfiles index.html \"assets/**/*\" dist",
+    "deploy": "npm run build-css && npm run build-js && npm run copy"
   },
   "author": "Konstantinos Zagoris",
   "license": "ISC",
@@ -22,6 +24,9 @@
     "autoprefixer": "^10.0.1",
     "chokidar-cli": "^2.1.0",
     "concurrently": "^5.3.0",
+    "copyfiles": "^2.4.0",
+    "cpx": "^1.5.0",
+    "cross-env": "^7.0.2",
     "cssnano": "^4.1.10",
     "esbuild": "^0.7.13",
     "postcss": "^8.1.1",
