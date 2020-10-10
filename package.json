@@ -32,6 +32,7 @@
     "postcss": "^8.1.1",
     "postcss-cli": "^8.1.0",
     "postcss-copy": "^7.1.0",
-    "postcss-import": "^12.0.1"
+    "postcss-import": "^12.0.1",
+    "typescript": "^4.0.3"
   }
 }

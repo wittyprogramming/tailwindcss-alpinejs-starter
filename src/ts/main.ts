@@ -7,8 +7,8 @@ declare global {
 }
 
 function toggleNavbar(collapseID: string) {
-  document.getElementById(collapseID).classList.toggle("hidden");
-  document.getElementById(collapseID).classList.toggle("block");
+  document.getElementById(collapseID)?.classList.toggle("hidden");
+  document.getElementById(collapseID)?.classList.toggle("block");
 }
 
 window.toggleNavbar = toggleNavbar;
