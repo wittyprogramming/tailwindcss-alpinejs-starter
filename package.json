@@ -28,7 +28,7 @@
     "cpx": "^1.5.0",
     "cross-env": "^7.0.2",
     "cssnano": "^4.1.10",
-    "esbuild": "^0.7.13",
+    "esbuild": "^0.7.15",
     "postcss": "^8.1.1",
     "postcss-cli": "^8.1.0",
     "postcss-copy": "^7.1.0",
