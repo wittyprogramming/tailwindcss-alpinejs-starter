@@ -28,4 +28,4 @@ npm run deploy
 
 The output web page is at `dist` folder.
 
-For more information read [the current blog post](https://www.wittyprogramming.dev/starter-tailwind-alpine)
+For more information read [the current blog post](https://www.wittyprogramming.dev/articles/starter-tailwind-alpine/)
