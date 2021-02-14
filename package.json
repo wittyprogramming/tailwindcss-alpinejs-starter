@@ -16,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
-    "alpinejs": "^2.7.0",
+    "alpinejs": "^2.8.0",
     "tailwindcss": "^2.0.3"
   },
   "devDependencies": {
