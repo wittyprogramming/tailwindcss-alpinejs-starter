@@ -5,9 +5,11 @@
   "scripts": {
     "watch-css": "postcss src/css/main.css -o assets/css/style.css -w",
     "build-css": "cross-env ENV_BUILD=prod postcss src/css/main.css -o assets/css/style.css",
-    "watch-js": "esbuild src/ts/main.ts --bundle --sourcemap=inline --target=es2016 --outfile=assets/js/main.js --servedir=./",
+    "watch-js": "esbuild src/ts/main.ts --bundle --sourcemap=inline --target=es2016 --outfile=assets/js/main.js --watch",
+    "debug-js": "esbuild src/ts/main.ts --bundle --sourcemap=inline --target=es2016 --outfile=assets/js/main.js --servedir=./",
     "build-js": "esbuild src/ts/main.ts --bundle --minify --target=es2016 --outfile=assets/js/main.js",
     "start": "concurrently \"npm:watch-css\" \"npm:watch-js\"",
+    "dev": "concurrently \"npm:watch-css\" \"npm:debug-js\"",
     "copy": "copyfiles index.html \"assets/**/*\" dist",
     "deploy": "npm run build-css && npm run build-js && npm run copy"
   },
